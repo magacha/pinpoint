@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/text_event"
+        android:layout_width="fill_parent"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:text="@string/label_event"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"/>
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="searchCauses"
+            android:text="@string/label_search" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_most_probable"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="8dip"
+        android:text="@string/label_most_probable_causes" />
+
+    <TextView
+        android:id="@+id/text_event_not_observed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/label_even_not_observed"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/list_causes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" >
+
+    </ListView>
+
+</LinearLayout>

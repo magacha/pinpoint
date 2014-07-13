@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEntryActivity" >
+
+    <LinearLayout
+        android:id="@+id/layout_undo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFDD00"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp" >
+
+        <TextView
+            android:id="@+id/text_undo_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:ignore="SelectableText" />
+
+        <Button
+            android:id="@+id/button_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="undoAddOccurence"
+            android:text="@string/label_undo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_add_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="16dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="40dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_event"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="@string/label_event" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="16dip"
+            android:ems="10" >
+
+            <requestFocus />
+        </AutoCompleteTextView>
+
+        <TextView
+            android:id="@+id/text_time_date"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:text="@string/label_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dip"
+            android:layout_marginTop="16dip" >
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/editTextBackground"
+                android:clickable="true"
+                android:ems="10"
+                android:gravity="center"
+                android:onClick="showDatePicker"
+                android:text="XX/XX/XX"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="SelectableText" />
+ 
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?android:attr/editTextBackground"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="showTimePicker"
+                android:text="XX:XX"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                tools:ignore="SelectableText" />
+            
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dip"
+            android:onClick="addOccurence"
+            android:paddingBottom="16dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="16dp"
+            android:text="@string/label_add" />
+        
+    </LinearLayout>
+
+</FrameLayout>

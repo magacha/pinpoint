@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pinpoint</string>
+    <string name="action_analyze">Find causes</string>
+    <string name="label_add">Add</string>
+    <string name="label_event">Event</string>
+    <string name="label_time">Time</string>
+    <string name="label_undo">Undo</string>
+    <string name="message_missing_name">Please specify the event name</string>
+    <string name="message_event_added">Added event</string>
+    <string name="label_most_probable_causes">Most probable causes</string>
+    <string name="label_even_not_observed">Event not yet observed</string>
+	<string name="title_add_occurrence">Add event</string>
+	<string name="title_analyze">Find causes</string>
+	<string name="label_search">Search</string>
+	
+</resources>
